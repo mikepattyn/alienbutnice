@@ -1,9 +1,14 @@
-# License
+Proprietary License
 
-Copyright (c) 2026 Mike Pattyn. All rights reserved.
+Copyright © 2026 Mike Pattyn. All rights reserved.
 
-This repository and all of its contents are the exclusive property of Mike Pattyn.
+Except where expressly authorized in writing by the copyright holder,
+no permission is granted to use, copy, modify, merge, publish,
+distribute, sublicense, sell, or create derivative works from any
+original material contained in this repository, in whole or in part.
 
-No part of this software, source code, or associated materials may be copied, modified, distributed, publicly displayed, or otherwise used without prior written permission from the copyright holder.
+This notice applies only to original work contained in this repository.
+Third-party software, dependencies, assets, and other materials remain
+subject to their respective licenses and copyright holders.
 
-Unauthorized use is strictly prohibited.
+SPDX-License-Identifier: LicenseRef-Proprietary
