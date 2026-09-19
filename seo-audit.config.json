@@ -1,0 +1,8 @@
+{
+  "canonicalHost": "https://alienbutnice.nl",
+  "locales": ["en"],
+  "outputDir": "dist",
+  "unknownPath": "/this-path-should-not-exist-seo-audit",
+  "alternateHosts": ["https://www.alienbutnice.nl"],
+  "pages": [{ "path": "/", "type": "home" }]
+}

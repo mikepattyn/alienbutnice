@@ -102,7 +102,8 @@ p {
   z-index: 40;
 }
 
-.site-nav.is-scrolled .site-nav__inner {
+.site-nav.is-scrolled .site-nav__inner,
+.site-nav--solid .site-nav__inner {
   background: rgb(5 4 12 / 0.55);
   box-shadow: 0 0 0 1px rgb(240 243 255 / 0.08);
   backdrop-filter: blur(16px);
@@ -535,6 +536,54 @@ p {
   font-size: 0.75rem;
 }
 
+.not-found {
+  position: relative;
+  overflow: hidden;
+  min-height: 100dvh;
+  padding: 6.5rem 1.25rem 3rem;
+  background: var(--bg);
+}
+
+.not-found__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 36rem;
+  margin: 0 auto;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.not-found-page .brand,
+.not-found-page .site-nav nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.not-found__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+  margin-top: 2rem;
+  padding: 0.75rem 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: var(--text-kicker);
+  font-weight: 600;
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+}
+
+.not-found__cta:hover,
+.not-found__cta:focus-visible {
+  color: var(--fg);
+  border-color: var(--accent);
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(14px);
@@ -587,6 +636,10 @@ p {
   .band,
   .guardians {
     padding: 7rem 2.5rem;
+  }
+
+  .not-found {
+    padding: 8rem 2.5rem 4rem;
   }
 
   .portraits {
