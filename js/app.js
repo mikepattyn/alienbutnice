@@ -1,3 +1,5 @@
+import "./sites.js";
+
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const desktop = window.matchMedia("(min-width: 768px)").matches;
 
