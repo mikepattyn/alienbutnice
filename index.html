@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Echo is coming. Louder. Smarter. Watching. The guardian of our space — by AlienButNice."
+      content="Echo & the others are coming. Louder, smarter & always watching. The fleet — by AlienButNice."
     />
     <meta name="theme-color" content="#05040c" />
-    <title>AlienButNice — Echo is coming</title>
+    <title>AlienButNice — Echo & the others are coming</title>
     <link rel="canonical" href="https://alienbutnice.nl/" />
-    <meta property="og:title" content="AlienButNice — Echo is coming" />
+    <meta property="og:title" content="AlienButNice — Echo & the others are coming" />
     <meta
       property="og:description"
-      content="Echo is coming. Louder. Smarter. Watching. The guardian of our space — by AlienButNice."
+      content="Echo & the others are coming. Louder, smarter & always watching. The fleet — by AlienButNice."
     />
     <meta property="og:image" content="https://alienbutnice.nl/art/hero.jpg" />
     <meta
@@ -60,6 +60,7 @@
         </a>
         <nav aria-label="Primary">
           <a href="#echo">Echo</a>
+          <a href="#fleet">The fleet</a>
           <a href="#space">The space</a>
         </nav>
       </div>
@@ -94,11 +95,13 @@
         <div class="hero-vignette"></div>
         <div class="film-grain"></div>
         <div class="hero__copy">
-          <p class="kicker reveal is-in">Alienbutnice presents</p>
-          <h1 class="echo-title echo-glow reveal is-in" style="transition-delay: 90ms">ECHO</h1>
-          <p class="script flare-script reveal is-in" style="transition-delay: 170ms">is coming.</p>
-          <p class="tagline reveal is-in" style="transition-delay: 260ms">
-            Louder. Smarter. Watching.
+          <p class="kicker reveal is-in">Alienbutnice presents:</p>
+          <h1 class="hero-title echo-glow reveal is-in" style="transition-delay: 90ms">
+            Echo & the others
+          </h1>
+          <p class="script flare-script reveal is-in" style="transition-delay: 170ms">are coming.</p>
+          <p class="tagline tagline--plain reveal is-in" style="transition-delay: 260ms">
+            louder, smarter & always watching
           </p>
         </div>
         <a class="scroll-cue" href="#echo" aria-label="Scroll to Echo">
@@ -164,6 +167,64 @@
                 <p>Every pattern is learned. Every action is logged. Echo doesn’t sleep.</p>
               </figcaption>
             </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="fleet" class="fleet">
+        <div class="glow-accent"></div>
+        <div class="fleet__inner">
+          <p class="kicker kicker--accent reveal">The fleet</p>
+          <h2 class="statement reveal">
+            Echo is online.
+            <span class="flare-script">Four seats are open.</span>
+          </h2>
+          <div class="fleet-stage" data-fleet>
+            <div class="fleet-chrome">
+              <button type="button" class="fleet-arrow" data-fleet-prev aria-label="Previous seat">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true">
+                  <path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div
+                class="fleet-carousel"
+                role="region"
+                aria-roledescription="carousel"
+                aria-label="The fleet"
+                tabindex="0"
+                data-fleet-track
+              >
+                <button type="button" class="fleet-bot is-empty" data-fleet-card data-status="open" aria-label="Open seat. Bring to center.">
+                  <span class="fleet-mark" aria-hidden="true">?</span>
+                  <span class="fleet-plate"><span class="fleet-status">Open</span></span>
+                </button>
+                <button type="button" class="fleet-bot is-empty" data-fleet-card data-status="open" aria-label="Open seat. Bring to center.">
+                  <span class="fleet-mark" aria-hidden="true">?</span>
+                  <span class="fleet-plate"><span class="fleet-status">Open</span></span>
+                </button>
+                <button type="button" class="fleet-bot" data-fleet-card data-status="online" data-name="Echo" aria-label="Echo, online. Centered.">
+                  <img src="/art/echo-card.jpg" width="762" height="1132" alt="" />
+                  <span class="fleet-plate">
+                    <span class="fleet-name">Echo</span>
+                    <span class="fleet-status fleet-status--online">Online</span>
+                  </span>
+                </button>
+                <button type="button" class="fleet-bot is-empty" data-fleet-card data-status="open" aria-label="Open seat. Bring to center.">
+                  <span class="fleet-mark" aria-hidden="true">?</span>
+                  <span class="fleet-plate"><span class="fleet-status">Open</span></span>
+                </button>
+                <button type="button" class="fleet-bot is-empty" data-fleet-card data-status="open" aria-label="Open seat. Bring to center.">
+                  <span class="fleet-mark" aria-hidden="true">?</span>
+                  <span class="fleet-plate"><span class="fleet-status">Open</span></span>
+                </button>
+              </div>
+              <button type="button" class="fleet-arrow" data-fleet-next aria-label="Next seat">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true">
+                  <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+            <div class="fleet-dots" role="tablist" aria-label="Fleet position" data-fleet-dots></div>
           </div>
         </div>
       </section>

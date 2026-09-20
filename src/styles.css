@@ -11,7 +11,7 @@
   --font-display: "Orbitron", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
 
-  --text-display: clamp(4.1rem, 14vw, 9.25rem);
+  --text-display: clamp(2.35rem, 7vw, 5.1rem);
   --text-script: clamp(1.55rem, 4.2vw, 3.15rem);
   --text-kicker: 0.72rem;
   --text-statement: clamp(1.65rem, 3.4vw, 2.75rem);
@@ -253,12 +253,13 @@ p {
   color: var(--accent);
 }
 
-.echo-title {
+.echo-title,
+.hero-title {
   margin: 1rem 0 0;
   font-family: var(--font-display);
   font-size: var(--text-display);
   font-weight: 900;
-  line-height: 0.82;
+  line-height: 0.95;
   letter-spacing: -0.03em;
 }
 
@@ -294,6 +295,11 @@ p {
   letter-spacing: var(--tracking-kicker);
   text-transform: uppercase;
   color: rgb(240 243 255 / 0.8);
+}
+
+.tagline--plain {
+  text-transform: none;
+  letter-spacing: 0.12em;
 }
 
 .scroll-cue {
@@ -438,6 +444,192 @@ p {
   max-width: 28rem;
   margin: 0.75rem 0 0;
   color: var(--muted);
+}
+
+.fleet {
+  position: relative;
+  overflow: hidden;
+  scroll-margin-top: 5rem;
+  padding: 5rem 1.25rem;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+}
+
+.fleet__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 72rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.fleet-stage {
+  position: relative;
+  width: min(100%, 72rem);
+  margin: 3rem auto 0;
+}
+
+.fleet-chrome {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.fleet-arrow {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgb(5 4 12 / 0.72);
+  color: var(--fg);
+}
+
+.fleet-arrow:hover,
+.fleet-arrow:focus-visible {
+  color: var(--accent);
+  border-color: color-mix(in oklab, var(--accent) 55%, transparent);
+}
+
+.fleet-carousel {
+  position: relative;
+  flex: 1 1 auto;
+  height: 28rem;
+  min-width: 0;
+  overflow: hidden;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.fleet-bot {
+  --shift: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: calc(8 - abs(var(--shift)));
+  width: 14.5rem;
+  aspect-ratio: 2 / 3;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  line-height: 0;
+  border-radius: 1.25rem;
+  background: var(--bg);
+  box-shadow: 0 0 0 1px rgb(240 243 255 / 0.1);
+  transform: translate(-50%, -50%) translateX(calc(var(--shift) * 9.75rem))
+    scale(calc(1 - abs(var(--shift)) * 0.14));
+  opacity: calc(1 - abs(var(--shift)) * 0.12);
+  transition: transform var(--motion-fast) var(--ease-out),
+    opacity var(--motion-fast) var(--ease-out),
+    box-shadow var(--motion-fast) var(--ease-out);
+}
+
+.fleet-bot img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  scale: 1.08;
+  pointer-events: none;
+}
+
+.fleet-bot.is-empty {
+  background:
+    radial-gradient(circle at 50% 42%, color-mix(in oklab, var(--accent) 14%, transparent), transparent 58%),
+    var(--surface);
+}
+
+.fleet-mark {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding-bottom: 1.75rem;
+  font-family: var(--font-display);
+  font-size: 5.5rem;
+  font-weight: 600;
+  line-height: 1;
+  color: rgb(240 243 255 / 0.28);
+}
+
+.fleet-bot.is-center .fleet-mark {
+  color: var(--accent);
+}
+
+.fleet-bot.is-center {
+  z-index: 10;
+  box-shadow:
+    0 0 0 1px color-mix(in oklab, var(--accent) 50%, transparent),
+    0 0 28px color-mix(in oklab, var(--accent) 26%, transparent);
+}
+
+.fleet-plate {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  padding: 1.75rem 0.5rem 0.7rem;
+  background: linear-gradient(to top, var(--bg), transparent);
+}
+
+.fleet-name {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.fleet-status {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.fleet-status--online {
+  color: var(--accent);
+}
+
+.fleet-dots {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.5rem;
+}
+
+.fleet-dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.fleet-dot::before {
+  content: "";
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 9999px;
+  background: rgb(240 243 255 / 0.28);
+}
+
+.fleet-dot.is-active::before {
+  background: var(--accent);
+  transform: scale(1.25);
 }
 
 .space {
@@ -634,7 +826,8 @@ p {
   }
 
   .band,
-  .guardians {
+  .guardians,
+  .fleet {
     padding: 7rem 2.5rem;
   }
 
@@ -663,6 +856,21 @@ p {
       ),
       radial-gradient(ellipse at 50% 36%, transparent 28%, rgb(5 4 12 / 0.55) 100%);
   }
+
+  .fleet-chrome {
+    gap: 0.25rem;
+  }
+
+  .fleet-carousel {
+    height: 22.5rem;
+  }
+
+  .fleet-bot {
+    width: 11.25rem;
+    border-radius: 0.875rem;
+    transform: translate(-50%, -50%) translateX(calc(var(--shift) * 6.5rem))
+      scale(calc(1 - abs(var(--shift)) * 0.16));
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -679,7 +887,8 @@ p {
 
   .scroll-cue,
   .portrait-frame img,
-  .hero-video {
+  .hero-video,
+  .fleet-bot {
     animation: none;
     transition: none;
   }

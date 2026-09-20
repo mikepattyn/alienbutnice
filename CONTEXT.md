@@ -31,7 +31,7 @@ Canonical host: `https://alienbutnice.nl`. English-only. No locale prefixes and 
 
 | URL | Type | State | Applicable signals | Present | Status | Sitemap |
 |-----|------|-------|--------------------|---------|--------|---------|
-| `https://alienbutnice.nl/` | home | indexable | unique title + description, self-canonical, `<html lang="en">`, one `h1`, Organization JSON-LD, image `alt`, real `href`s | title, description, canonical, lang, `h1` ECHO, Organization `name`/`url` from visible copy, alts, section links | 200 | yes |
+| `https://alienbutnice.nl/` | home | indexable | unique title + description, self-canonical, `<html lang="en">`, one `h1`, Organization JSON-LD, image `alt`, real `href`s | title, description, canonical, lang, `h1` Echo & the others, Organization `name`/`url` from visible copy, alts, section links | 200 | yes |
 | unknown paths | — | not a page | real 404, body `/404.html` | `404.html` ships with `noindex`; CloudFront 403/404 → `/404.html` is Track C | pending platform hosting wave (today the origin serves the home shell with 200) | no |
 | `https://www.alienbutnice.nl/…` | — | not a page | 301 to apex | Track C | pending platform hosting wave (today `www` returns 200) | no |
 
