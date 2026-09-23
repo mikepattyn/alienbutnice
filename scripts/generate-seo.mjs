@@ -26,7 +26,7 @@ function git(args) {
 
 function sourceFile(urlPath) {
   const trimmed = (urlPath || "/").replace(/\/+$/, "") || "";
-  if (!trimmed) return "index.html";
+  if (!trimmed) return "src/index.html";
   return `${trimmed.replace(/^\//, "")}.html`;
 }
 

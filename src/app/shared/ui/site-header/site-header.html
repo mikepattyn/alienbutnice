@@ -1,0 +1,16 @@
+<header class="site-nav" [class.site-nav--solid]="variant() === 'solid'" [class.is-scrolled]="scrolled()" data-nav>
+  <div class="site-nav__inner">
+    <a class="brand" [href]="variant() === 'home' ? '#top' : '/'">
+      <app-alien-mark />
+      <span>ALIENBUTNICE</span>
+    </a>
+    <nav aria-label="Primary">
+      @if (variant() === 'home') {
+        <a [href]="echoHref" data-abn-site="echo">Echo</a>
+        <a href="#space">The space</a>
+      } @else {
+        <a href="/">Home</a>
+      }
+    </nav>
+  </div>
+</header>

@@ -17,7 +17,14 @@ The guardian of the space — persistent memory, always watching. Not a parrot /
 
 ## Stack
 
-Vite · plain HTML/CSS/JS · Google Fonts (Orbitron, Inter)
+Angular 22 static prerender · self-hosted Inter and Orbitron (SIL OFL)
+
+## Data
+
+| Flow | Data | Privacy-sensitive? | Purpose | Retention state | Page claim |
+|------|------|--------------------|---------|-----------------|------------|
+| Page load | none stored; no cookies, localStorage, forms, or analytics | no | show the brand home and 404 | nothing stored | "This page stores nothing and does not send the visit anywhere else." |
+| Typefaces | Inter and Orbitron files served from this origin | no | display | first-party static assets | same footer line — the visit is not sent to Google Fonts |
 
 ## Visual theme
 

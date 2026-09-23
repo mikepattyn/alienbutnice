@@ -1,9 +1,21 @@
+@import '@fontsource/inter/latin-300.css';
+@import '@fontsource/inter/latin-300-italic.css';
+@import '@fontsource/inter/latin-400.css';
+@import '@fontsource/inter/latin-500.css';
+@import '@fontsource/inter/latin-600.css';
+@import '@fontsource/inter/latin-700.css';
+@import '@fontsource/orbitron/latin-500.css';
+@import '@fontsource/orbitron/latin-600.css';
+@import '@fontsource/orbitron/latin-700.css';
+@import '@fontsource/orbitron/latin-800.css';
+@import '@fontsource/orbitron/latin-900.css';
+
 :root {
   --bg: #05040c;
   --surface: #0c0a16;
   --fg: #f0f3ff;
   --muted: #9aa3c7;
-  --faint: #6b7394;
+  --faint: #7d86aa;
   --accent: #3ee8ff;
   --flare: #b56cff;
   --line: rgb(240 243 255 / 0.12);
@@ -63,6 +75,11 @@ video {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 h1,
@@ -126,6 +143,7 @@ p {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  min-height: 44px;
 }
 
 .brand span {
@@ -141,6 +159,9 @@ p {
 }
 
 .site-nav nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   font-family: var(--font-display);
   font-size: var(--text-kicker);
   font-weight: 500;
@@ -308,6 +329,10 @@ p {
   left: 50%;
   z-index: 3;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
   color: var(--muted);
   transform: translateX(-50%);
   animation: cue 2.2s var(--ease-out) infinite;
@@ -551,7 +576,8 @@ p {
   text-transform: uppercase;
 }
 
-.closing__bar p:last-child {
+.closing__bar p:last-child,
+.closing__trust {
   font-size: 0.75rem;
 }
 

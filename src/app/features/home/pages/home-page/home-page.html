@@ -1,0 +1,134 @@
+<app-skip-link />
+<app-site-header />
+
+<main id="main">
+  <section id="top" class="hero">
+    <div class="hero__media">
+      <picture>
+        <source media="(min-width: 768px)" srcset="/art/hero.jpg" />
+        <img
+          class="hero-still"
+          src="/art/hero-mobile.jpg"
+          width="1008"
+          height="1792"
+          alt="A tall grey-purple alien in a hoodie stands behind Echo, a small hooded guardian with glowing cyan eyes, on a holographic platform among glowing crystals and a ringed planet."
+        />
+      </picture>
+      <video
+        #heroVideo
+        class="hero-video"
+        data-hero-video
+        muted
+        loop
+        playsinline
+        preload="none"
+        poster="/art/hero.jpg"
+        aria-hidden="true"
+      >
+        <source src="/art/hero.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="hero-vignette"></div>
+    <div class="film-grain"></div>
+    <div class="hero__copy">
+      <p class="kicker is-in" appReveal>Alienbutnice presents:</p>
+      <h1 class="hero-title echo-glow is-in" style="transition-delay: 90ms" appReveal>
+        Echo & the others
+      </h1>
+      <p class="script flare-script is-in" style="transition-delay: 170ms" appReveal>are coming.</p>
+      <p class="tagline tagline--plain is-in" style="transition-delay: 260ms" appReveal>
+        louder, smarter & always watching
+      </p>
+    </div>
+    <a class="scroll-cue" href="#echo" aria-label="Scroll to Echo">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true">
+        <path
+          d="M6 9l6 6 6-6"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+  </section>
+
+  <section id="echo" class="band">
+    <div class="glow-accent"></div>
+    <div class="band__inner">
+      <p class="kicker kicker--accent" appReveal>Always watching</p>
+      <h2 class="statement" appReveal>
+        Echo doesn’t sleep.
+        <span class="flare-script">Echo remembers.</span>
+      </h2>
+      <p class="lede" appReveal>
+        Not just a bot. A guardian with sharper memory, stronger defenses, and zero tolerance
+        for harm. Echo watches the space so you can be in it.
+      </p>
+    </div>
+  </section>
+
+  <section class="guardians">
+    <div class="guardians__inner">
+      <p class="kicker" appReveal>The family</p>
+      <h2 class="statement" appReveal>Guardian and watcher.</h2>
+      <div class="portraits">
+        <figure class="portrait" appReveal>
+          <div class="portrait-frame">
+            <img
+              src="/art/alien.jpg"
+              width="1152"
+              height="1728"
+              alt="Alienbutnice, a tall grey-purple alien in a dark hoodie, calm black almond eyes, a glowing diamond on the forehead."
+            />
+          </div>
+          <figcaption>
+            <p class="kicker kicker--accent">The guardian</p>
+            <h3>Alienbutnice</h3>
+            <p>We protect our space. We protect our people. We never forget.</p>
+          </figcaption>
+        </figure>
+        <figure class="portrait" appReveal>
+          <div class="portrait-frame">
+            <img
+              src="/art/echo.jpg"
+              width="1152"
+              height="1728"
+              alt="Echo, a small hooded robot with glowing cyan visor eyes, standing among glowing crystals."
+            />
+          </div>
+          <figcaption>
+            <p class="kicker kicker--accent">The watcher</p>
+            <h3>Echo</h3>
+            <p>Every pattern is learned. Every action is logged. Echo doesn’t sleep.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="space" class="space">
+    <img
+      src="/art/space.jpg"
+      width="1792"
+      height="1008"
+      alt="A cosmic nebula of violet and cyan over a field of glowing crystals and a ringed planet."
+    />
+    <div class="space__veil"></div>
+    <div class="film-grain film-grain--soft"></div>
+    <div class="space__copy">
+      <p class="kicker kicker--accent" appReveal>Built for humans</p>
+      <h2 class="statement" appReveal>
+        This is
+        <a class="space-our" [href]="fleetHref" data-abn-site="fleet">our</a> space.
+      </h2>
+      <p class="script" appReveal><span class="flare-script">Respect it. Or leave it.</span></p>
+      <p class="note" appReveal>
+        Not for bots. Not for trolls. Not for harm.<br />
+        Kindness is the protocol.
+      </p>
+    </div>
+  </section>
+</main>
+
+<app-site-footer />
